@@ -1,4 +1,2 @@
-/home       /index.html     200
-/about      /about.html     200
-/services   /services.html  200
-/contact    /contact.html   200
+/           index.php           200
+/skills     src/php/test.php    200
