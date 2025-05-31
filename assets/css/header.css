@@ -1,4 +1,77 @@
 header {
-    background-color: #a31111;
+    position: fixed;
+    background-image: linear-gradient(to right, black, rgb(31, 31, 31));
+
+    top: 0px;
+    width: 100%;
+    height: 50px;
+    z-index: 10;
+}
+header > div {
+    justify-content: space-between;
     font-family: Arial, sans-serif;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    
+    height: 100%
+}
+body {
+    margin-top: 52px;
+}
+header > div > h1 {
+    color: white;
+    margin: 0%;
+}
+.navigation > ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0%;
+}
+.navigation > ul > li {
+    position: relative;
+
+    background-image: linear-gradient(to right, gold, gray, gold);
+
+    background-size: 200%;
+    margin: 0px 5px 0px 5px;
+    border-radius: 15px;
+    box-shadow: 3px 3px black;
+    transition: 0.3s;
+
+    animation: gradient 3s linear infinite;
+}
+.navigation > ul > li:hover {
+    transform: scale(120%);
+}
+@keyframes gradient {
+    to {
+        background-position: 200%;
+    }
+}
+.navigation > ul > li > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #271b1b;
+
+    margin: 2px;
+    border-radius: 15px;
+    box-shadow: inset 3px 3px black;
+}
+.navigation > ul > li > div > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lucida Sans Unicode';
+    text-decoration: none;
+
+    color: white;
+
+    margin: 0px 5px 0px 5px;
+}
+.navigation > ul > li:hover {
+    background-image: linear-gradient(to right, cyan, gray, cyan);
 }
