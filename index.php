@@ -2,14 +2,10 @@
 <html lang="en">
     <head>
         <title>Kamachi Dev</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/assets/css/stylesheet.css"/>
-        <script src="src/js/master_init.js"></script>
-        <script defer src="src/js/master_load.js"></script>
+        <?php include 'templates/master.html'; ?>
     </head>
-    <iframe src="/templates/header.html" class="header"></iframe>
-    <body class="main_body">
+    <?php include 'templates/header.html'; ?>
+    <body>
         <section>
             <ul>
                 <li class="fade_in">Lorem ipsum dolor sit amet, consectetur adipiscing</li>
@@ -32,5 +28,8 @@
             Aenean tempus orci id urna placerat, quis rhoncus neque sagittis. Proin turpis odio, laoreet in tincidunt sit amet, eleifend eu nulla. Donec rhoncus tortor non pretium facilisis. Curabitur sapien libero, tempor eget sollicitudin euismod, laoreet ut urna. Sed mollis eget odio ac faucibus. Curabitur sit amet justo id enim porttitor rutrum non vel libero. Nullam ac sapien eu justo dictum vehicula. Curabitur molestie dolor porttitor diam rutrum, eget mattis felis accumsan. Maecenas egestas mattis ligula sit amet porttitor. Aliquam varius lectus metus, in tempus libero tempus at. Vestibulum dapibus magna eget sem tincidunt venenatis. Nulla consequat leo a lacus finibus scelerisque. Cras augue neque, pellentesque at quam ut, lobortis dictum libero. Suspendisse ut sem ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         </p>
     </body>
-    <iframe src="/templates/footer.html" class="footer"></iframe>
+    <?php include 'templates/footer.html'; ?>
 </html>
+
+<?php
+?>

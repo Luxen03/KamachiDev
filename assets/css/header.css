@@ -1,8 +1,11 @@
 header {
+    position: fixed;
     background-image: linear-gradient(to right, black, rgb(31, 31, 31));
 
+    top: 0px;
     width: 100%;
     height: 50px;
+    z-index: 10;
 }
 header > div {
     justify-content: space-between;
@@ -12,6 +15,9 @@ header > div {
     flex-direction: row;
     
     height: 100%
+}
+body {
+    margin-top: 52px;
 }
 header > div > h1 {
     color: white;
