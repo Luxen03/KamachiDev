@@ -18,7 +18,6 @@ function after_load() {
         element_observer.observe(element)
         element.style.transition = "1s ease-out"
     });
-    change_role()
     document.querySelector("#loader").style.display = "none"
     document.querySelector("#content").style.display = "block"
     update_all()
