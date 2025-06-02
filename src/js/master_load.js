@@ -14,3 +14,8 @@ document.querySelectorAll(".fade_in").forEach(element => {
     element.style.transition = "1s ease-out"
 });
 
+document.querySelectorAll("include").forEach(element => {
+    fetch(element.src)
+        .then((res) => res.text())
+        .then((text) => element.innerHTML = text)
+});
