@@ -1,6 +1,21 @@
 let wait_dict = {
     "include": false
 }
+let role_element = document.querySelector("#roles")
+let role_list = [
+    "machine learning engineer",
+    "full stack developer",
+    "unity developer",
+    "3d artist"
+]
+let role_i = 0
+function change_role() {
+    role_element.innerHTML = `A ${role_list[role_i]}`
+    role_i = (role_i + 1) % role_list.length
+    setTimeout(() => {
+        change_role()
+    }, 1000);
+}
 
 function after_load() {
     console.log("After load")
@@ -19,6 +34,7 @@ function after_load() {
         element_observer.observe(element)
         element.style.transition = "1s ease-out"
     });
+    change_role()
     document.querySelector("#loader").style.display = "none"
     document.querySelector("#content").style.display = "block"
 }
