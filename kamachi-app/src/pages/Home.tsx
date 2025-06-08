@@ -3,18 +3,27 @@ import { Divider, PanelList } from '../templates/Elements.tsx'
 
 function Home() {
     const [roleIndex, setRoleIndex] = useState(0)
-    const role_list = [
-        'machine learning engineer',
-        'full stack developer',
-        'unity developer',
-        '3d artist'
-    ]
+    const [displayed, setDisplayed] = useState('')
     useEffect(() => {
-        const interval = setInterval(() => {
-            setRoleIndex((prev) => (prev + 1) % role_list.length);
-        }, 1000);
-        return () => clearInterval(interval);
-    })
+        const role_list = [
+            'a machine learning engineer',
+            'a full stack developer',
+            'a unity developer',
+            'a 3d artist'
+        ]
+        let char = 0
+        setDisplayed('')
+        const typing = setInterval(() => {
+            setDisplayed(role_list[roleIndex].slice(0, char++))
+            if (char === role_list[roleIndex].length + 1) {
+                clearInterval(typing)
+                setTimeout(() => {
+                    setRoleIndex((prev) => (prev + 1) % role_list.length)
+                }, 1000)
+            }
+        }, 20);
+        return () => clearInterval(typing);
+    }, [roleIndex])
     const summary: [React.ReactElement, string][] = [
         [<>
             <h1>Education</h1>
@@ -32,7 +41,7 @@ function Home() {
                 <li>Front End : HTML, CSS, React, Typescript</li>
                 <li>Back End : PHP, ASPX</li>
                 <li>Game Dev : C#</li>
-                <li>Data Analytics : Python</li>
+                <li>Machine Learning : Python</li>
                 <li>Database : SQL</li>
             </ul>
         </>, ''],
@@ -50,7 +59,9 @@ function Home() {
                 <div className="info">
                     <h1>Hello!</h1>
                     <h2>My name is Kamachi</h2>
-                    <p id="roles">a {role_list[roleIndex]}</p>
+                    <p id="roles">
+                        {displayed}<span className='cursor'>|</span>
+                    </p>
                 </div>
                 <div className="video-container">
                     <video src="/public/assets/videos/Montage.mp4" autoPlay loop muted></video>

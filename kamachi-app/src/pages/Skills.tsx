@@ -1,59 +1,104 @@
-import { PanelList } from "../templates/Elements"
+import { PanelList, RatioBar } from "../templates/Elements"
 
 function Skills() {
-    const frontend: [React.ReactElement, string][] = [
+    const webdev: [React.ReactElement, string][] = [
         [<>
-            <h1>HTML</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h1>Front End</h1>
+            <ul>
+                <li>HTML</li>
+                <RatioBar val={100} />
+                <li>CSS</li>
+                <RatioBar val={80} />
+                <li>Javascript</li>
+                <RatioBar val={100} />
+                <li>Typescript</li>
+                <RatioBar val={90} />
+            </ul>
         </>, ''],
         [<>
-            <h1>CSS</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h1>Back End</h1>
+            <ul>
+                <li>PHP</li>
+                <RatioBar val={90} />
+                <li>ASPX</li>
+                <RatioBar val={70} />
+            </ul>
         </>, ''],
         [<>
-            <h1>Javascript</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h1>Database</h1>
+            <ul>
+                <li>SQL</li>
+                <RatioBar val={100} />
+            </ul>
         </>, ''],
         [<>
-            <h1>Typescript</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h1>Library</h1>
+            <ul>
+                <li>React</li>
+                <RatioBar val={90} />
+            </ul>
         </>, '']
     ]
-    const backend: [React.ReactElement, string][] = [
+    const ml: [React.ReactElement, string][] = [
         [<>
-            <h1>PHP</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h1>Data cleaning</h1>
+            <ul>
+                <li>Scaling</li>
+                <li>One-hot encoding</li>
+                <li>Parsing</li>
+            </ul>
+        </>, ''],
+        [<>
+            <h1>Basic Models</h1>
+            <ul>
+                <li>Linear Regression</li>
+                <li>Decision Trees</li>
+                <li>Random Forest</li>
+            </ul>
+        </>, ''],
+        [<>
+            <h1>Library Models</h1>
+            <ul>
+                <li>Ultralytics YOLO11</li>
+                <li>Deepface</li>
+            </ul>
         </>, '']
     ]
-    const db: [React.ReactElement, string][] = [
+    const gamedev: [React.ReactElement, string][] = [
         [<>
-            <h1>SQL</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </>, '']
-    ]
-    const lib: [React.ReactElement, string][] = [
+            <h1>Programming</h1>
+            <ul>
+                <li>C#</li>
+                <RatioBar val={80} />
+                <li>HLSL</li>
+                <RatioBar val={40} />
+            </ul>
+        </>, ''],
         [<>
-            <h1>React</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h1>Concepts</h1>
+            <ul>
+                <li>Vectors</li>
+                <RatioBar val={90} />
+                <li>Quaternions</li>
+                <RatioBar val={70} />
+                <li>Object Inheritance</li>
+                <RatioBar val={100} />
+            </ul>
         </>, '']
     ]
     return (
         <>
             <section>
-                <h1>Front End</h1>
-                <PanelList items={frontend} />
+                <h1>Web Development</h1>
+                <PanelList items={webdev} />
             </section>
             <section>
-                <h1>Back End</h1>
-                <PanelList items={backend} />
+                <h1>Machine Learning</h1>
+                <PanelList items={ml} />
             </section>
             <section>
-                <h1>Database</h1>
-                <PanelList items={db} />
-            </section>
-            <section>
-                <h1>Library</h1>
-                <PanelList items={lib} />
+                <h1>Game Development</h1>
+                <PanelList items={gamedev} />
             </section>
         </>
     )
